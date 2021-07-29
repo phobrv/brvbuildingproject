@@ -34,7 +34,7 @@
 		</div>
 		<div class="col-md-4">
 			@isset($data['post'])
-			@include('phobrv::input.inputFile',['label'=>'Icon','key'=>'thumb','width'=>'100%'])
+			@include('phobrv::input.inputImage',['label'=>'Icon','key'=>'thumb','width'=>'100%'])
 			<hr>
 
 			<div class="form-group">

@@ -3,7 +3,7 @@
 	@csrf
 	@include('phobrv::input.inputText',['label'=>'Title','key'=>'utility_title','type'=>'meta'])
 	@include('phobrv::input.inputText',['label'=>'Des','key'=>'utility_test','type'=>'meta'])
-	@include('phobrv::input.inputFile',['label'=>'Banner ','key'=>'utility_banner','type'=>'meta','width'=>'200px'])
+	@include('phobrv::input.inputImage',['label'=>'Banner ','key'=>'utility_banner','type'=>'meta','width'=>'200px'])
 	@include('phobrv::input.inputText',['label'=>'Number','key'=>'utility_number','type'=>'meta'])
 	@isset($data['meta']['utility_number'])
 	@for($i=0;$i<$data['meta']['utility_number'];$i++)
