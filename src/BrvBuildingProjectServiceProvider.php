@@ -31,13 +31,15 @@ class BrvBuildingProjectServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        $this->mergeConfigFrom(__DIR__.'/../config/brvbuildingproject.php', 'brvbuildingproject');
-
+        // $this->mergeConfigFrom(__DIR__.'/../config/brvbuildingproject.php', 'brvbuildingproject');
+       $this->loadViewsFrom(__DIR__ . '/../resources/views', 'phobrv');
+       $this->loadRoutesFrom(__DIR__ . '/routes.php');
+       
         // Register the service the package provides.
-        $this->app->singleton('brvbuildingproject', function ($app) {
-            return new BrvBuildingProject;
-        });
-    }
+       $this->app->singleton('brvbuildingproject', function ($app) {
+        return new BrvBuildingProject;
+    });
+   }
 
     /**
      * Get the services provided by the provider.
@@ -57,9 +59,9 @@ class BrvBuildingProjectServiceProvider extends ServiceProvider
     protected function bootForConsole(): void
     {
         // Publishing the configuration file.
-        $this->publishes([
-            __DIR__.'/../config/brvbuildingproject.php' => config_path('brvbuildingproject.php'),
-        ], 'brvbuildingproject.config');
+        // $this->publishes([
+        //     __DIR__.'/../config/brvbuildingproject.php' => config_path('brvbuildingproject.php'),
+        // ], 'brvbuildingproject.config');
 
         // Publishing the views.
         /*$this->publishes([
