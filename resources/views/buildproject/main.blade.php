@@ -67,7 +67,7 @@
 	</div>
 	<button id="btnSubmit" style="display: none" type="submit" ></button>
 </form>
-<div class="box-footer">
+<div class="card-footer">
 	<a href="#" onclick="save()"  class="btn btn-primary float-left">
 		<i class="fa fa-floppy-o"></i> @lang('Save & Close')
 	</a>
