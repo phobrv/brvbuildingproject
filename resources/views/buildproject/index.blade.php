@@ -4,7 +4,7 @@
 <ul>
 	<li>
 		<a href="{{route('buildproject.create')}}"  class="btn btn-primary float-left">
-			<i class="fa fa-edit"></i> @lang('Create new')
+			<i class="far fa-edit"></i> @lang('Create new')
 		</a>
 	</li>
 	<li>
@@ -71,7 +71,7 @@
 					</td>
 					<td style="width: 50px;"  align="center">
 						<a href="{{route('buildproject.edit',['buildproject'=>$r->id])}}">
-							<i class="fa fa-edit" title="Sửa"></i>
+							<i class="far fa-edit" title="Sửa"></i>
 						</a>
 
 					</td>
