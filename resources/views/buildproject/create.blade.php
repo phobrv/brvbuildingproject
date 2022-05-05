@@ -10,18 +10,20 @@
 @section('content')
 
 <div class="nav-tabs-custom">
-	<ul class="nav nav-tabs">
-		<li class="active"><a href="#tab_1" data-toggle="tab">Main</a></li>
-		<li><a href="#tab_2" data-toggle="tab">Page Head</a></li>
-		<li><a href="#tab_3" data-toggle="tab">Tổng thể</a></li>
-		<li><a href="#tab_4" data-toggle="tab">Vị trí dự án</a></li>
-		<li><a href="#tab_5" data-toggle="tab">Mặt bằng</a></li>
-		<li><a href="#tab_6" data-toggle="tab">Tiện ích</a></li>
-		<li><a href="#tab_7" data-toggle="tab">Tiến độ</a></li>
-		<li><a href="#tab_8" data-toggle="tab">Thư viện ảnh & Video</a></li>
+	<ul class="nav nav-tabs" id="myTab" role="tablist">
+		<li class="nav-item" role="presentation">
+			<a class="nav-link active" href="#tab_1" data-toggle="tab">Main</a>
+		</li>
+		<li class="nav-item" role="presentation"><a class="nav-link"  href="#tab_2" data-toggle="tab">Page Head</a></li>
+		<li class="nav-item" role="presentation"><a class="nav-link"  href="#tab_3" data-toggle="tab">Tổng thể</a></li>
+		<li class="nav-item" role="presentation"><a class="nav-link"  href="#tab_4" data-toggle="tab">Vị trí dự án</a></li>
+		<li class="nav-item" role="presentation"><a class="nav-link"  href="#tab_5" data-toggle="tab">Mặt bằng</a></li>
+		<li class="nav-item" role="presentation"><a class="nav-link"  href="#tab_6" data-toggle="tab">Tiện ích</a></li>
+		<li class="nav-item" role="presentation"><a class="nav-link"  href="#tab_7" data-toggle="tab">Tiến độ</a></li>
+		<li class="nav-item" role="presentation"><a  class="nav-link" href="#tab_8" data-toggle="tab">Thư viện ảnh & Video</a></li>
 	</ul>
-	<div class="tab-content">
-		<div class="tab-pane active" id="tab_1">
+	<div class="tab-content" id="myTabContent">
+		<div class="tab-pane fade show active" id="tab_1">
 			@include('phobrv::buildproject.main')
 		</div>
 		@isset($data['post'])
