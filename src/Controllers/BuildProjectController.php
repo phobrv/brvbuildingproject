@@ -160,7 +160,7 @@ class BuildProjectController extends Controller
             $data['arrayGroup'] = $this->termRepository->getTermsOrderByParent($this->taxonomy);
             $data['post'] = $this->postRepository->find($id);
             $data['arrayGroupID'] = $this->termRepository->getArrayTermID($data['post']->terms, $this->taxonomy);
-            $data['meta'] = $this->postService->getMeta($data['post']->postMetas);
+            $data['meta'] = $data['post']->meta;
             return view('phobrv::buildproject.create')->with('data', $data);
         } catch (Exception $e) {
             return back()->with('alert_danger', $e->getMessage());
